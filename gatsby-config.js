@@ -28,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: isDev ? '`http://essence-of-beauty.local/graphql`' : 'https://dragon:acceptable@intuitive-wheel.localsite.io'
+        url: isDev ? '`http://essence-of-beauty.local/graphql`' : 'https://dragon:acceptable@intuitive-wheel.localsite.io/graphql'
       },
     },
 
