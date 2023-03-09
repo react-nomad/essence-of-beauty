@@ -6,6 +6,8 @@
  *
  */
 
+const isDev = false
+
 module.exports = {
   /**
    * Adding plugins to this array adds them to your Gatsby site.
@@ -26,9 +28,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url:
-          process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+        url: isDev ? '`http://essence-of-beauty.local/graphql`' : 'https://dragon:acceptable@intuitive-wheel.localsite.io'
       },
     },
 
@@ -70,7 +70,6 @@ module.exports = {
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
-
     /**
      * this (optional) plugin enables Progressive Web App + Offline functionality
      * To learn more, visit: https://gatsby.dev/offline

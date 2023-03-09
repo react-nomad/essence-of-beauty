@@ -1,9 +1,11 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import React from 'react'
+import { Script } from 'gatsby'
 
-// normalize CSS across browsers
-import "./src/css/normalize.css"
-
-// custom CSS styles
-import "./src/css/style.css"
+export const wrapRootElement = ({ element }) => {
+    return (
+        <>
+            <Script src="https://cdn.tailwindcss.com"/>
+            {element}
+        </>
+    )
+}
